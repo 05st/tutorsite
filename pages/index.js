@@ -26,7 +26,7 @@ export default function Home() {
         <h2 class="font-bold text-3xl">We cover</h2>
         <SubjectListing img="/images/math.png" name="Math" desc="All the way to AP Calculus, and some basic discrete math." />
         <SubjectListing img="/images/science.png" name="Science" desc="Everything up to highschool physics, chemistry, and biology." />
-        <SubjectListing img="/images/cs.png" name="Computer Science" desc="Everything" />
+        <SubjectListing img="/images/cs.png" name="Computer Science" desc="Everything up to and including university / undergraduate level." />
       </div>
 
       <h2 class="text-2xl text-center">
@@ -44,6 +44,7 @@ export default function Home() {
           <input class="p-2 bg-blue-400 hover:bg-blue-500 hover:cursor-pointer rounded text-white font-bold min-w-min w-1/4" type="submit" value="Submit"/>
         </form>
       </div>
+      <p class="text-center text-sm text-gray-400">If you're looking to become a tutor, fill out the form above. We will have tutor applications available soon.</p>
     </div>
   );
 }
