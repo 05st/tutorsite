@@ -1,5 +1,5 @@
 module.exports = {
   images: {
-    loader: 'static',
+    loader: 'imgix',
   },
 }
