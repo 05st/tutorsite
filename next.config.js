@@ -1,4 +1,5 @@
-images: {
-  loader: 'imgix',
-  path: ''
+module.exports = {
+  images: {
+    loader: 'static',
+  },
 }
