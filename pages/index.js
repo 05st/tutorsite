@@ -5,7 +5,7 @@ import Image from 'next/image';
 function SubjectListing(props) {
   return (
     <div class="w-full h-auto flex flex-row items-center space-x-4">
-      <Image class="w-16 h-full" src={props.img} alt={props.name} width={96} height={96}/>
+      <img class="w-16 h-full" src={props.img} alt={props.name}/>
       <div class="h-full flex flex-col">
         <p class="font-bold">{props.name}</p>
         <p>{props.desc}</p>
