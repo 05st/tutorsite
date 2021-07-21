@@ -4,10 +4,10 @@ import Image from 'next/image';
 
 function SubjectListing(props) {
   return (
-    <div class="w-full h-auto flex flex-row items-center space-x-4">
-      <img class="w-16 h-full" src={props.img} alt={props.name}/>
-      <div class="h-full flex flex-col">
-        <p class="font-bold">{props.name}</p>
+    <div className="w-full h-auto flex flex-row items-center space-x-4">
+      <img className="w-16 h-full" src={props.img} alt={props.name}/>
+      <div className="h-full flex flex-col">
+        <p className="font-bold">{props.name}</p>
         <p>{props.desc}</p>
       </div>
     </div>
@@ -16,36 +16,43 @@ function SubjectListing(props) {
 
 export default function Home() {
   return (
-    <div class="relative p-6 top-24 flex flex-col items-center space-y-24">
-      <div class="flex flex-col items-center space-y-2">
-        <h1 class="font-bold text-4xl text-center">Free tutoring, for everyone.</h1>
-        <p class="text-center">Tutoring should be available for free to everybody who wants it. Learning should be unrestricted.</p>
-      </div>
-      
-      <div class="rounded-lg bg-gray-50 p-4 w-full md:w-1/2 flex flex-col items-center space-y-4 shadow">
-        <h2 class="font-bold text-3xl">We cover</h2>
-        <SubjectListing img="/images/math.png" name="Math" desc="All the way to AP Calculus, and some basic discrete math." />
-        <SubjectListing img="/images/science.png" name="Science" desc="Everything up to highschool physics, chemistry, and biology." />
-        <SubjectListing img="/images/cs.png" name="Computer Science" desc="Everything up to and including university / undergraduate level." />
-      </div>
+    <>
+      <Head>
+        <title>Megatutors</title>
+        <meta property="og:title" content="Megatutors" key="title"/>
+      </Head>
 
-      <h2 class="text-2xl text-center">
-        <Link href="/booking"><a class="font-bold">Booking</a></Link> takes less than five minutes. Even better, <Link href="/community"><a class="font-bold">join our community</a></Link>.
-      </h2>
-      
-      <div class="bg-gray-100 p-4 w-auto flex flex-col items-center space-y-4 shadow">
-        <h2 class="font-bold text-xl">Have a question?</h2>
-        <form class="flex flex-col items-center space-y-4">
-          <div class="grid grid-cols-2 gap-4">
-            <input class="p-2 shadow-inner" type="text" placeholder="Name"/>
-            <input class="p-2 shadow-inner" type="text" placeholder="email@address.tld"/>
-          </div>
-          <textarea class="p-2 shadow-inner w-full h-full" placeholder="Ask your question here"/>
-          <input class="p-2 bg-blue-400 hover:bg-blue-500 hover:cursor-pointer rounded text-white font-bold min-w-min w-1/4" type="submit" value="Submit"/>
-        </form>
+      <div className="relative p-6 top-24 flex flex-col items-center space-y-24">
+        <div className="flex flex-col items-center space-y-2">
+          <h1 className="font-bold text-4xl text-center">Free tutoring, for everyone.</h1>
+          <p className="text-center">Tutoring should be available for free to everybody who wants it. Learning should be unrestricted.</p>
+        </div>
+        
+        <div className="rounded-lg bg-gray-50 p-4 w-full md:w-1/2 lg:w-1/3 flex flex-col items-center space-y-4 shadow">
+          <h2 className="font-bold text-3xl">We cover</h2>
+          <SubjectListing img="/images/math.png" name="Math" desc="All the way to AP Calculus, and some basic discrete math." />
+          <SubjectListing img="/images/science.png" name="Science" desc="Everything up to highschool physics, chemistry, and biology." />
+          <SubjectListing img="/images/cs.png" name="Computer Science" desc="Everything up to and including university / undergraduate level." />
+        </div>
+
+        <h2 className="text-2xl text-center">
+          <Link href="/booking"><a className="font-bold hover:underline">Booking</a></Link> takes less than five minutes. Even better, <Link href="/community"><a className="font-bold hover:underline">join our community</a></Link>.
+        </h2>
+        
+        <div className="bg-gray-100 p-4 w-auto flex flex-col items-center space-y-4 shadow">
+          <h2 className="font-bold text-xl">Have a question?</h2>
+          <form className="flex flex-col items-center space-y-4">
+            <div className="grid grid-cols-2 gap-4">
+              <input className="p-2 shadow-inner" type="text" placeholder="Name"/>
+              <input className="p-2 shadow-inner" type="text" placeholder="email@address.tld"/>
+            </div>
+            <textarea className="p-2 shadow-inner w-full h-full" placeholder="Ask your question here"/>
+            <input className="p-2 bg-blue-400 transition duration-150 hover:bg-blue-500 hover:cursor-pointer rounded text-white font-bold min-w-min w-1/4" type="submit" value="Submit"/>
+          </form>
+        </div>
+        <p className="text-center text-sm text-gray-400">If you're looking to become a tutor, fill out the form above. We will have tutor applications available soon.</p>
       </div>
-      <p class="text-center text-sm text-gray-400">If you're looking to become a tutor, fill out the form above. We will have tutor applications available soon.</p>
-    </div>
+    </>
   );
 }
 
