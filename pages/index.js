@@ -14,7 +14,7 @@ function SubjectListing(props) {
   );
 }
 
-const API_URL = "https://inquiry.megatutors.workers.dev/"
+const API_URL = "https://submission.megatutors.workers.dev/inquiry"
 
 export default function Home() {
   return (
@@ -43,14 +43,16 @@ export default function Home() {
         
         <div className="bg-gray-100 p-4 w-auto flex flex-col items-center space-y-4 shadow">
           <h2 className="font-bold text-xl">Have a question?</h2>
+
           <form action={API_URL} method="POST" className="flex flex-col items-center space-y-4">
             <div className="grid grid-cols-2 gap-4">
               <input required className="p-2 shadow-inner" type="text" name="name" placeholder="Name"/>
-              <input required className="p-2 shadow-inner" type="text" name="email" placeholder="email@address.tld"/>
+              <input required className="p-2 shadow-inner" type="email" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" name="email" placeholder="email@address.tld"/>
             </div>
             <textarea required className="p-2 shadow-inner w-full h-full" name="content" placeholder="Ask your question here"/>
             <input className="p-2 bg-blue-400 transition duration-150 hover:bg-blue-500 hover:cursor-pointer rounded text-white font-bold min-w-min w-1/4" type="submit" value="Submit"/>
           </form>
+
         </div>
         <p className="text-center text-sm text-gray-400">If you're looking to become a tutor, fill out the form above. We will have tutor applications available soon.</p>
       </div>

@@ -1,5 +1,7 @@
 import Head from 'next/head';
 
+const API_URL = "https://submission.megatutors.workers.dev/booking"
+
 export default function Booking() {
   return (
     <>
@@ -30,11 +32,12 @@ export default function Booking() {
 
           <div className="bg-gray-50 rounded-lg p-4 w-auto flex flex-col items-center space-y-4 shadow">
             <h2 className="font-bold text-2xl">Eager to get started? Fill out the form.</h2>
-            <form className="flex flex-col items-center space-y-4 w-full h-full">
+
+            <form action={API_URL} method="POST" className="flex flex-col items-center space-y-4 w-full h-full">
               <div className="grid grid-cols-2 gap-4 w-full">
-                <input className="p-2 shadow-inner" type="text" placeholder="Name"/>
-                <input className="p-2 shadow-inner" type="text" placeholder="email@address.tld"/>
-                <select id="subject" className="p-2 shadow-inner">
+                <input required name="name" className="p-2 shadow-inner" type="text" placeholder="Name"/>
+                <input required name="email" className="p-2 shadow-inner" type="email" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" placeholder="email@address.tld"/>
+                <select required name="subject" id="subject" className="p-2 shadow-inner">
                   <option selected disabled hidden>Subject</option>
                   <option value="math">Math</option>
                   <option value="physics">Physics</option>
@@ -42,16 +45,16 @@ export default function Booking() {
                   <option value="biology">Biology</option>
                   <option value="cs">Computer Science</option>
                 </select>
-                <select id="platform" className="p-2 shadow-inner">
+                <select required name="platform" id="platform" className="p-2 shadow-inner">
                   <option selected disabled hidden>Platform</option>
                   <option value="zoom">Zoom</option>
                   <option value="skype">Skype</option>
                   <option value="discord">Discord</option>
                 </select>
-                <input className="p-2 shadow-inner" type="date"/>
-                <input className="p-2 shadow-inner" type="text" placeholder="Time & timezone"/>
+                <input required name="date" className="p-2 shadow-inner" type="date"/>
+                <input required name="time" className="p-2 shadow-inner" type="text" placeholder="Time & timezone"/>
               </div>
-              <textarea className="p-2 shadow-inner w-full h-full" placeholder="Any further details or requests here. Be specific about what material will be worked on."/>
+              <textarea required name="content" className="p-2 shadow-inner w-full h-full" placeholder="Any further details or requests here. Be specific about what material will be worked on."/>
               <input className="p-2 transition duraton-150 bg-blue-400 hover:bg-blue-500 hover:cursor-pointer rounded text-white font-bold min-w-min w-1/4" type="submit" value="Book Session"/>
               <p className="text-sm text-gray-400 text-center">If you forgot anything, please reply to the confirmation email that you will receive within 24 hours.</p>
             </form>
