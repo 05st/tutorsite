@@ -1,5 +1,6 @@
 import 'tailwindcss/tailwind.css';
 import Link from 'next/link';
+import Head from 'next/head';
 import { useState } from 'react';
 
 function NavButton(props) {
@@ -43,6 +44,10 @@ function NavBar() {
 export default function App({ Component, pageProps }) {
   return (
     <>
+      <Head>
+        <link rel="icon" href="/favicon.ico"/>
+      </Head>
+
       <NavBar />
       <Component {...pageProps} />
     </>
