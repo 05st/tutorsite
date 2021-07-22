@@ -22,6 +22,7 @@ export default function Home() {
       <Head>
         <title>Megatutors</title>
         <meta property="og:title" content="Megatutors" key="title"/>
+        <link rel="shortcut icon" href="/favicon.ico"/>
       </Head>
 
       <div className="relative p-6 top-24 flex flex-col items-center space-y-24">
