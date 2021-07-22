@@ -17,10 +17,10 @@ function NavBar() {
   const [active, setActive] = useState(false);
 
   return (
-    <nav className="fixed z-20 w-full h-16 flex items-center bg-blue-400 p-2 flex-wrap shadow">
+    <nav className="fixed z-20 w-full flex items-center bg-blue-400 p-2 flex-wrap shadow">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css" integrity="sha256-x8PYmLKD83R9T/sYmJn1j3is/chhJdySyhet/JuHnfY=" crossorigin="anonymous" />
-      <div className="p-2 mr-4 h-full inline-flex items-center">
-          <div className="flex flex-cols h-full space-x-2">
+      <div className="p-2 mr-4 inline-flex items-center">
+          <div className="flex flex-cols h-8 space-x-2">
             <img className="w-full h-full" src="/images/logo.png" alt="Logo"/>
             <Link href="/">
               <a className="text-xl text-white font-bold uppercase tracking-wide">
