@@ -6,8 +6,8 @@ export default function Booking() {
   return (
     <>
       <Head>
-        <title>Megatutors - Booking</title>
-        <meta property="og:title" content="Megatutors - Booking" key="title"/>
+        <title>Booking | Megatutors</title>
+        <meta property="og:title" content="Booking | Megatutors" key="title"/>
       </Head>
 
       <div className="relative top-24 p-6 flex flex-col items-center space-y-24">

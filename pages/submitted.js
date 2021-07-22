@@ -5,8 +5,9 @@ export default function Submitted() {
   return (
     <>
       <Head>
-        <title>Megatutors - Submitted</title>
-        <meta property="og:title" content="Megatutors - Submitted" key="title" />
+        <title>Submitted | Megatutors</title>
+        <meta property="og:title" content="Submitted | Megatutors" key="title" />
+        <meta name="robots" content="noindex, nofollow"/>
       </Head>
 
      <div className="relative top-24 flex flex-col items-center space-y-24 p-6">

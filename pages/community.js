@@ -5,8 +5,8 @@ export default function Community() {
   return (
     <>
       <Head>
-        <title>Megatutors - Community</title>
-        <meta property="og:title" content="Megatutors - Community" key="title" />
+        <title>Community | Megatutors</title>
+        <meta property="og:title" content="Community | Megatutors" key="title" />
       </Head>
 
       <div className="relative top-24 flex flex-col items-center space-y-24 p-6">

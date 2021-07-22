@@ -20,8 +20,13 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Megatutors</title>
+        <title>Free Tutoring | Megatutors</title>
+
         <meta property="og:title" content="Megatutors" key="title"/>
+        <meta name="description" content="Free online tutoring service for everybody. Ran by volunteers."/>
+        <meta name="keywords" content="megatutors, free tutor, tutoring, online, free tutoring, highschool, school, math, science, mega, tutor, computer science"/>
+        <meta name="robots" content="index, follow"/>
+        
         <link rel="shortcut icon" href="/favicon.ico"/>
       </Head>
 
@@ -39,7 +44,7 @@ export default function Home() {
         </div>
 
         <h2 className="text-2xl text-center">
-          <Link href="/booking"><a className="font-bold hover:underline">Booking</a></Link> takes less than five minutes. Even better, <Link href="/community"><a className="font-bold hover:underline">join our community</a></Link>.
+          <Link href="/booking"><a className="font-bold hover:underline">Booking</a></Link> takes less than a minute. Even better, <Link href="/community"><a className="font-bold hover:underline">join our community</a></Link>.
         </h2>
         
         <div className="bg-gray-100 p-4 w-auto flex flex-col items-center space-y-4 shadow">

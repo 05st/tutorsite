@@ -5,8 +5,8 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>Megatutors - About</title>
-        <meta property="og:title" content="Megatutors - About" key="title"/>
+        <title>About | Megatutors </title>
+        <meta property="og:title" content="About | Megatutors" key="title"/>
       </Head>
 
       <div className="relative top-24 flex flex-col p-6 items-center">
