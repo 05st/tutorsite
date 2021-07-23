@@ -42,7 +42,7 @@ export default function Booking() {
         </div>
 
         <div className="grid grid-rows-2 md:grid-rows-none md:grid-cols-3 gap-6">
-          <div className="bg-gray-50 p-4 w-auto col-span-1 md:col-span-2 flex flex-col items-center space-y-4 shadow">
+          <div className="bg-gray-50 p-4 w-auto min-h-max col-span-1 md:col-span-2 flex flex-col items-center space-y-4 shadow">
             <h2 className="font-bold text-2xl">Ready to get started?</h2>
             <form action={API_URL} method="POST" className="flex flex-col items-center space-y-4 w-full h-full">
               <div className="grid grid-cols-2 gap-4 w-full">
@@ -75,7 +75,7 @@ export default function Booking() {
                 <Input required name="timezone" type="text" placeholder="Timezone"/>
                 <Input required name="country" type="text" placeholder="Country"/>
               </div>
-              <textarea required name="content" className="p-2 rounded border outline-none focus:border-2 focus:border-blue-400 w-full h-full" placeholder="Any further details or requests here. Tell us a bit about the student. Be specific about what material will be worked on."/>
+              <textarea required name="content" className="p-2 rounded border outline-none focus:border-2 focus:border-blue-400 w-full h-full resize-y" rows="5" placeholder="Any further details or requests here. Tell us a bit about the student. Be specific about what material will be worked on."/>
               <input className="p-2 transition duraton-150 bg-blue-400 hover:bg-blue-500 hover:cursor-pointer rounded text-white font-bold min-w-min w-1/4" type="submit" value="Book Session"/>
               <p className="text-sm text-gray-400 text-center">If you forgot anything, please reply to the confirmation email that you will receive within 24 hours.</p>
             </form>
