@@ -26,7 +26,7 @@ export default function Home() {
         <meta property="og:type" content="website"/>
         <meta property="og:site_name" content="Megatutors"/>
         <meta property="og:description" content="Megatutors is a free tutoring service available to everyone, ran by volunteers."/>
-        <meta property="og:image" content="/images/logo.png"/>
+        <meta property="og:image" content="/images/icon.png"/>
 
         <meta name="description" content="Free online tutoring service for everybody. Ran by volunteers."/>
         <meta name="keywords" content="megatutors, free tutor, tutoring, online, free tutoring, highschool, school, math, science, mega, tutor, computer science"/>
