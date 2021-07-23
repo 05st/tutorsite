@@ -21,7 +21,7 @@ function NavBar() {
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css" integrity="sha256-x8PYmLKD83R9T/sYmJn1j3is/chhJdySyhet/JuHnfY=" crossorigin="anonymous" />
       <div className="p-2 mr-4 inline-flex items-center">
           <div className="flex flex-cols h-8 space-x-2">
-            <img src="/images/logo.png" alt="Logo"/>
+            <img style={{width: "32px", height: "32px"}} src="/images/logo.png" alt="Logo"/>
             <Link href="/">
               <a className="text-xl text-white font-bold uppercase tracking-wide">
                 Megatutors
